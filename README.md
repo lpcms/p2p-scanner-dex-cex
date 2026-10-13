@@ -13,7 +13,11 @@ DexScreener by contract address — with fees, slippage, gas and a hedged execut
 [![Node.js](https://img.shields.io/badge/Node.js-24.x-5FA04E?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-<img src="docs/preview.png" alt="P2P Scanner [DEX] — Gate.io vs DEX arbitrage table with spread, profit and direction per token" width="880">
+🌐 **Live:** [p2p-scanner-dex-cex.vercel.app](https://p2p-scanner-dex-cex.vercel.app/)
+
+<a href="https://p2p-scanner-dex-cex.vercel.app/">
+  <img src="docs/preview.png" alt="P2P Scanner [DEX] — Gate.io vs DEX arbitrage table with spread, profit and direction per token" width="880">
+</a>
 
 </div>
 
