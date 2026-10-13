@@ -11,3 +11,6 @@ dist/
 .vscode/
 .idea/
 *.tsbuildinfo
+
+# deployment
+.vercel

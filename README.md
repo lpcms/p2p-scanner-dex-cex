@@ -30,6 +30,7 @@ DexScreener by contract address — with fees, slippage, gas and a hedged execut
 - [🔌 API](#-api)
 - [📜 Scripts](#-scripts)
 - [🗂️ Project Structure](#️-project-structure)
+- [☁️ Deployment](#️-deployment)
 - [⚠️ Limitations](#️-limitations)
 - [🗺️ Roadmap](#️-roadmap)
 - [📄 License](#-license)
@@ -209,9 +210,35 @@ p2p-scanner-dex-cex/
 │   ├── gas.ts                   # Owlracle gas with cache
 │   └── format.ts
 ├── types/                       # shared types
+├── vercel.json                  # Vercel function region
 └── docs/
     └── preview.png              # README screenshot
 ```
+
+---
+
+## ☁️ Deployment
+
+### ▲ Vercel (recommended)
+
+1. Import the repository in Vercel — Next.js and Node.js 24 are detected automatically.
+2. No environment variables are required.
+3. Deploy.
+
+> ⚠️ **Region.** Vercel runs functions in Washington, D.C. (`iad1`) by default, and Gate.io
+> restricts US traffic. [`vercel.json`](vercel.json) therefore pins the functions to
+> **Frankfurt (`fra1`)**. A full scan takes up to a minute, so `/api/scan` sets
+> `maxDuration = 300`.
+
+### 🖥️ Own server / Node.js hosting
+
+```bash
+npm ci
+npm run build
+npm start            # PORT=3000 by default
+```
+
+A long-running Node.js server keeps the in-memory scan cache warm between requests.
 
 ---
 
